@@ -11,6 +11,10 @@
 		C8609A822983E46200799C82 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8609A812983E46200799C82 /* ContentView.swift */; };
 		C8609A842983E46300799C82 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C8609A832983E46300799C82 /* Assets.xcassets */; };
 		C8609A882983E46300799C82 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C8609A872983E46300799C82 /* Preview Assets.xcassets */; };
+		C8609A902983E48400799C82 /* SFSymbols.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8609A8F2983E48400799C82 /* SFSymbols.swift */; };
+		C8609A922983ECCC00799C82 /* ModalTypes.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8609A912983ECCC00799C82 /* ModalTypes.swift */; };
+		C8609A942983EFF100799C82 /* NewView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8609A932983EFF100799C82 /* NewView.swift */; };
+		C8609A962983EFFB00799C82 /* EditView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8609A952983EFFB00799C82 /* EditView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -20,6 +24,10 @@
 		C8609A832983E46300799C82 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C8609A852983E46300799C82 /* EnumsWithViews.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = EnumsWithViews.entitlements; sourceTree = "<group>"; };
 		C8609A872983E46300799C82 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		C8609A8F2983E48400799C82 /* SFSymbols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SFSymbols.swift; sourceTree = "<group>"; };
+		C8609A912983ECCC00799C82 /* ModalTypes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModalTypes.swift; sourceTree = "<group>"; };
+		C8609A932983EFF100799C82 /* NewView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewView.swift; sourceTree = "<group>"; };
+		C8609A952983EFFB00799C82 /* EditView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -52,7 +60,10 @@
 		C8609A7E2983E46200799C82 /* EnumsWithViews */ = {
 			isa = PBXGroup;
 			children = (
+				C8609A8E2983E46A00799C82 /* Enums */,
 				C8609A7F2983E46200799C82 /* EnumsWithViewsApp.swift */,
+				C8609A932983EFF100799C82 /* NewView.swift */,
+				C8609A952983EFFB00799C82 /* EditView.swift */,
 				C8609A812983E46200799C82 /* ContentView.swift */,
 				C8609A832983E46300799C82 /* Assets.xcassets */,
 				C8609A852983E46300799C82 /* EnumsWithViews.entitlements */,
@@ -67,6 +78,15 @@
 				C8609A872983E46300799C82 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		C8609A8E2983E46A00799C82 /* Enums */ = {
+			isa = PBXGroup;
+			children = (
+				C8609A8F2983E48400799C82 /* SFSymbols.swift */,
+				C8609A912983ECCC00799C82 /* ModalTypes.swift */,
+			);
+			path = Enums;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -140,7 +160,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				C8609A822983E46200799C82 /* ContentView.swift in Sources */,
+				C8609A922983ECCC00799C82 /* ModalTypes.swift in Sources */,
+				C8609A962983EFFB00799C82 /* EditView.swift in Sources */,
 				C8609A802983E46200799C82 /* EnumsWithViewsApp.swift in Sources */,
+				C8609A942983EFF100799C82 /* NewView.swift in Sources */,
+				C8609A902983E48400799C82 /* SFSymbols.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -287,10 +311,12 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.selsela.EnumsWithViews;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = auto;
-				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -325,10 +351,12 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.selsela.EnumsWithViews;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = auto;
-				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

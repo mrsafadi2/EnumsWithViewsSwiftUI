@@ -8,13 +8,36 @@
 import SwiftUI
 
 struct ContentView: View {
+    @State private var modalTypes:ModalTypes? = nil
     var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundColor(.accentColor)
-            Text("Hello, world!")
+         VStack {
+                SFSymbols.addreess
+                SFSymbols.avatr
+                SFSymbols.cart
+                SFSymbols.date
+                SFSymbols.invoices
+                SFSymbols.orders
+                SFSymbols.network
+                SFSymbols.notificstions
+                SFSymbols.share
+                SFSymbols.settings
         }
+        
+        VStack {
+            Button {
+                modalTypes = .edit
+            } label: {
+                Text("Edit View")
+            }
+            
+            Button {
+                modalTypes = .new
+            } label: {
+                Text("Add New ")
+            }
+        }
+        .sheet(item: $modalTypes, content: { $0 })
+        
         .padding()
     }
 }
